@@ -1,0 +1,355 @@
+.our-aeras {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  .aeras-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 80px;
+    position: relative;
+    .aeras-box {
+      width: calc(25% - 60px);
+      position: relative;
+      height: 560px;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      transition: all 0.4s ease-in;
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -ms-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      .aeras-img {
+        line-height: 0;
+        height: 100%;
+        width: 100%;
+        transform: translate(0px, 0px);
+        transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -moz-transition: all 0.4s ease-in;
+        -ms-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+        img {
+          height: 100%;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+        }
+      }
+      .aeras-content {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        background-color: $blue;
+        padding: 30px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        color: $white;
+        height: fit-content;
+        transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        -moz-transition: all 0.4s ease-in;
+        -ms-transition: all 0.4s ease-in;
+        -o-transition: all 0.4s ease-in;
+        h3 {
+          color: $white;
+        }
+        .hover-content {
+          margin-top: 20px;
+          display: none;
+          opacity: 0;
+          flex-direction: column;
+          gap: 20px;
+          transition: all 0.4s ease-in;
+          -webkit-transition: all 0.4s ease-in;
+          -moz-transition: all 0.4s ease-in;
+          -ms-transition: all 0.4s ease-in;
+          -o-transition: all 0.4s ease-in;
+          a {
+            color: $white;
+          }
+        }
+      }
+      &:last-child {
+        &:hover {
+          .aeras-img {
+            left: auto;
+            right: 0;
+          }
+          .aeras-content {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+      &:hover {
+        .aeras-img {
+          width: 225%;
+          position: absolute;
+          transform: translate3D(0px, 0px, 0px);
+          z-index: 2;
+          top: 0;
+          left: 0;
+          right: auto;
+          -webkit-transform: translate3D(0px, 0px, 0px);
+          -moz-transform: translate3D(0px, 0px, 0px);
+          -ms-transform: translate3D(0px, 0px, 0px);
+          -o-transform: translate3D(0px, 0px, 0px);
+        }
+        .aeras-content {
+          width: 225%;
+          z-index: 9;
+          left: 0;
+          bottom: 0;
+          top: 0;
+          right: auto;
+          height: 100%;
+          border-radius: 8px;
+          transform: translate3D(0, 0, 0);
+          -webkit-transform: translate3D(0, 0, 0);
+          -moz-transform: translate3D(0, 0, 0);
+          -ms-transform: translate3D(0, 0, 0);
+          -o-transform: translate3D(0, 0, 0);
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+          padding: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          text-align: left;
+          .hover-content {
+            display: flex;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        &:hover {
+          .aeras-img {
+            width: 228%;
+          }
+          .aeras-content {
+            width: 228%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1550px) {
+  .our-aeras {
+    .aeras-wrapper {
+      gap: 40px;
+      .aeras-box {
+        width: calc(25% - 30px);
+        &:hover {
+          .aeras-img {
+            width: 212%;
+          }
+          .aeras-content {
+            width: 212%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        &:hover {
+          .aeras-img {
+            width: 214%;
+          }
+          .aeras-content {
+            width: 214%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        &:hover {
+          .aeras-img {
+            width: 214%;
+          }
+          .aeras-content {
+            width: 214%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1360px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        height: 500px;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        height: 400px;
+      }
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        &:hover {
+          .aeras-img {
+            width: 216%;
+          }
+          .aeras-content {
+            width: 216%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .our-aeras {
+    .aeras-wrapper {
+      flex-wrap: wrap;
+      .aeras-box {
+        width: calc(50% - 20px);
+        &:last-child {
+          &:hover {
+            .aeras-img {
+              left: 0;
+              right: auto;
+            }
+            .aeras-content {
+              left: 0;
+              right: auto;
+            }
+          }
+        }
+        &:nth-child(2n) {
+          &:hover {
+            .aeras-img {
+              left: auto;
+              right: 0;
+            }
+            .aeras-content {
+              left: auto;
+              right: 0;
+            }
+          }
+        }
+        &:hover {
+          .aeras-img {
+            width: 209%;
+          }
+          .aeras-content {
+            width: 209%;
+            padding: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 890px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        &:hover {
+          .aeras-img {
+            width: 211%;
+          }
+          .aeras-content {
+            width: 211%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        &:hover {
+          .aeras-img {
+            width: 212%;
+          }
+          .aeras-content {
+            width: 212%;
+            padding: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .our-aeras {
+    .aeras-wrapper {
+      .aeras-box {
+        overflow: hidden;
+        width: 100%;
+        &:nth-child(1n) {
+          &:hover {
+            .aeras-img {
+              left: auto;
+              right: 0;
+            }
+            .aeras-content {
+              left: auto;
+              right: 0;
+            }
+          }
+        }
+        &:hover {
+          .aeras-img {
+            width: 100%;
+          }
+          .aeras-content {
+            width: 100%;
+            padding: 30px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,362 @@
+.contact-us {
+  .contact-us-wrapper {
+    display: flex;
+    align-items: start;
+
+    .contact-tab {
+      width: 22%;
+      display: flex;
+      flex-direction: column;
+
+      .tab-link {
+        padding: 35px 40px;
+        text-align: right;
+        font-size: $sub_text;
+        font-weight: 300;
+        line-height: 23px;
+        color: $gray;
+        position: relative;
+        z-index: 1;
+
+        &.active {
+          background-color: $blue;
+          color: $white;
+        }
+      }
+    }
+
+    .contact-tab-text {
+      width: 56%;
+      padding: 35px 40px 0;
+
+      .tab-panel {
+        display: none;
+        flex-direction: column;
+
+        &.active {
+          display: flex;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          margin-bottom: 80px;
+          .text {
+            p {
+              font-size: $sub_text;
+              font-weight: 300;
+              line-height: 23px;
+              color: $black-light;
+              a {
+                color: $blue;
+              }
+            }
+          }
+        }
+        form {
+          h3 {
+            margin-bottom: 40px;
+          }
+          .in-filds {
+            display: flex;
+            gap: 30px;
+            row-gap: 10px;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            .in-fild {
+              width: calc(50% - 15px);
+              input {
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 30px 0 10px;
+                border-bottom: 1px solid $gray;
+                font-size: $h6;
+                font-weight: 300;
+                line-height: 29px;
+                letter-spacing: -0.23999999463558197px;
+                font-family: $apercu_pro;
+                color: $gray;
+                &::placeholder {
+                  font-family: $apercu_pro;
+                  font-size: $h6;
+                  font-weight: 300;
+                  line-height: 29px;
+                  color: $gray;
+                  letter-spacing: -0.23999999463558197px;
+                }
+              }
+            }
+          }
+          .in-fild {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            label {
+              width: 100%;
+              font-family: $apercu_pro;
+              font-size: $h6;
+              font-weight: 300;
+              line-height: 29px;
+              color: $gray;
+              letter-spacing: -0.23999999463558197px;
+            }
+            textarea {
+              border: 1px solid $gray;
+              width: 100%;
+              height: 250px;
+              resize: none;
+            }
+          }
+          .captcha {
+            padding: 20px 0;
+            p {
+              font-size: $text;
+              font-weight: 400;
+              line-height: 19px;
+              color: $gray;
+            }
+          }
+          .submit-btn {
+            position: relative;
+            padding: 30px 20px;
+            margin: 80px -40px 0;
+            border-top: 0.5px solid $gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            transition: all 0.3s ease-in;
+            -webkit-transition: all 0.3s ease-in;
+            -moz-transition: all 0.3s ease-in;
+            -ms-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
+            cursor: pointer;
+            button {
+              background-color: transparent;
+              border: none;
+              outline: none;
+              color: $gray;
+              transition: all 0.3s ease-in;
+            }
+            &:hover {
+              background-color: $blue;
+              border-bottom: 1px solid $white;
+              button {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact-details {
+      width: 22%;
+      .loction {
+        padding: 40px 30px;
+        background-color: #f6f6f6;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .heading {
+          font-size: $btn;
+          font-weight: 700;
+          line-height: 17.48px;
+          letter-spacing: 0.9599999785423279px;
+          text-transform: uppercase;
+          color: $blue;
+        }
+        p {
+          font-size: $sub_text;
+          font-weight: 300;
+          line-height: 24px;
+          color: $black-light;
+          a {
+            color: $blue;
+            text-decoration: underline;
+            display: block;
+          }
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1480px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-details {
+        .loction {
+          p {
+            font-size: $text;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-tab {
+        width: 25%;
+      }
+
+      .contact-tab-text {
+        width: 50%;
+      }
+
+      .contact-details {
+        width: 25%;
+      }
+    }
+  }
+}
+@media (max-width: 1180px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-details {
+        .loction {
+          padding: 30px 20px;
+          p {
+            font-size: $btn;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .contact-us {
+    .contact-us-wrapper {
+      flex-direction: column;
+
+      .contact-tab {
+        width: 100%;
+      }
+
+      .contact-tab-text {
+        width: 100%;
+      }
+
+      .contact-details {
+        width: 100%;
+        .loction {
+          padding: 40px 30px;
+          p {
+            font-size: $sub_text;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-tab-text {
+        padding: 35px 15px 0;
+      }
+
+      .contact-tab {
+        .tab-link {
+          padding: 35px 15px;
+        }
+      }
+
+      .contact-details {
+        .loction {
+          padding: 30px 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 860px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-tab-text {
+        .tab-panel {
+          .content {
+            margin-bottom: 60px;
+          }
+
+          form {
+            h3 {
+              margin-bottom: 20px;
+            }
+            .submit-btn {
+              margin: 60px -40px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-tab-text {
+        .tab-panel {
+          .content {
+            margin-bottom: 40px;
+          }
+
+          form {
+            .submit-btn {
+              margin: 40px -40px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-tab {
+        .tab-link {
+          padding: 20px 15px;
+        }
+      }
+      .contact-tab-text {
+        padding: 20px 15px 0;
+
+        .tab-panel {
+          .content {
+            gap: 20px;
+          }
+          form {
+            .in-filds {
+              .in-fild {
+                width: 100%;
+                input {
+                  padding: 20px 0 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .contact-us {
+    .contact-us-wrapper {
+      .contact-details {
+        .loction {
+          p {
+            font-size: $text;
+          }
+        }
+      }
+    }
+  }
+}

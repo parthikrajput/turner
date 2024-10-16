@@ -1,0 +1,476 @@
+.pagination {
+  .pagination-wrapper {
+    max-width: $container;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    .serach_fillter {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 0.5px solid $border;
+      background-color: $white;
+      .filter {
+        border: none !important;
+      }
+      .serach,
+      .filter {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: 23px 40px;
+        border-right: 0.5px solid $border;
+        gap: 20px;
+        cursor: pointer;
+        img {
+          width: 32px;
+        }
+        p {
+          font-size: $text;
+          font-weight: 400;
+          line-height: 20px;
+          color: $gray;
+        }
+        form {
+          width: 100%;
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: $text;
+            font-weight: 400;
+            line-height: 20px;
+            color: $gray;
+            &::placeholder {
+              font-size: $text;
+              font-weight: 400;
+              line-height: 20px;
+              color: $gray;
+            }
+          }
+        }
+      }
+    }
+    .boxes {
+      display: flex;
+      align-items: stretch;
+      gap: 80px;
+      flex-wrap: wrap;
+      .box {
+        width: calc(25% - 60px);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .heading {
+          p {
+            font-size: $sub_text;
+            font-weight: 400;
+            line-height: 24px;
+            color: $gray;
+          }
+        }
+        .box-img {
+          img {
+            max-height: 310px;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+          }
+        }
+        .pagination-box-content {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          .loction {
+            font-size: $sub_text;
+            font-weight: 400;
+            line-height: 24px;
+            color: $gray;
+          }
+        }
+      }
+    }
+    .news-fillter {
+      background-color: transparent;
+      .serach {
+        width: 22%;
+        border: none;
+        padding: 23px 20px;
+      }
+      .filter {
+        width: 56%;
+        flex-wrap: wrap;
+        .filter-block {
+          font-size: 16px;
+          color: $gray;
+          padding: 5px 16px 7px;
+          border: 1px solid $border;
+          cursor: pointer;
+          border-radius: 100px;
+          display: inline-block;
+          -webkit-transition: background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+          -o-transition: background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+          &.active {
+            background-color: $blue;
+            color: $white;
+          }
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.commun-wrapper {
+  position: relative;
+  #pagination {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: $text;
+      font-weight: 400;
+      line-height: 19px;
+      color: $black-light;
+      &:disabled {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.filter-box {
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  top: 0;
+  right: -1000%;
+  background-color: $white;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  box-shadow: 0px 4.8px 24.4px -8px rgba(19, 16, 34, 0.16),
+    0px 8px 13px -2px rgba(19, 16, 34, 0.08);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  &.active {
+    right: 0;
+    opacity: 1;
+  }
+  .close-text {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 0.5px solid $border;
+    justify-content: space-between;
+    .text {
+      padding: 30px 20px;
+      border-right: 0.5px solid $border;
+      width: calc(100% - 90px);
+      display: flex;
+      align-items: center;
+      p {
+        font-size: $text;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 24px;
+        color: $black-light;
+      }
+    }
+    .close-icon {
+      padding: 30px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      cursor: pointer;
+    }
+  }
+  .serach {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 0.5px solid $border !important;
+    padding: 30px 20px !important;
+  }
+  .faq-container {
+    padding: 30px 20px;
+    flex: 1;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $white;
+      border-radius: 10px;
+      border: 4px solid $white;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: $white;
+    }
+    .link {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      a {
+        text-align: right;
+        font-size: $btn;
+        font-weight: 400;
+        color: $black-light;
+        width: fit-content;
+        margin-left: auto;
+        border-bottom: 1px solid $black-light;
+      }
+    }
+    .faq-item {
+      border-bottom: 1px solid $border;
+      padding: 10px 0;
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 20px 0;
+
+        p {
+          font-size: $text;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $black-light;
+          padding-bottom: 0;
+          line-height: 24px;
+        }
+        .icon {
+          font-size: 20px;
+          transition: transform 0.3s ease;
+        }
+        &.active {
+          .icon {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+          }
+        }
+        &.active + .faq-answer {
+          display: block;
+        }
+      }
+      .faq-answer {
+        display: none;
+        flex-wrap: wrap;
+        .filter-block {
+          font-size: 16px;
+          color: $gray;
+          padding: 5px 16px 7px;
+          border: 1px solid $border;
+          cursor: pointer;
+          border-radius: 100px;
+          display: inline-block;
+          margin-bottom: 16px;
+          margin-right: 12px;
+          -webkit-transition: background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+          -o-transition: background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+          &.active {
+            background-color: $border;
+            color: $black-light;
+          }
+          input {
+            display: none;
+          }
+        }
+        .by-country {
+          margin-top: 30px;
+          display: none;
+          p {
+            font-size: $text;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $black-light;
+            padding-bottom: 0;
+            line-height: 24px;
+          }
+          .country-list {
+            margin-top: 20px;
+            .country-section {
+              display: none;
+              &.active {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-submit {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    border-top: 0.5px solid $border;
+    bottom: 0;
+    background-color: $white;
+    a {
+      color: $black-light;
+      font-weight: 500;
+    }
+  }
+}
+.filter_icon {
+  position: fixed;
+  bottom: 30%;
+  right: 0;
+  display: none;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 40px;
+  background-color: $blue;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05),
+    0px 4px 9px -1px rgba(19, 16, 34, 0.03);
+  p {
+    font-size: $text;
+    font-weight: 400;
+    line-height: 20px;
+    color: $white;
+  }
+}
+@media (max-width: 1600px) {
+  .pagination {
+    .pagination-wrapper {
+      .boxes {
+        gap: 60px;
+
+        .box {
+          width: calc(25% - 45px);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1360px) {
+  .pagination {
+    .pagination-wrapper {
+      .boxes {
+        gap: 48px;
+
+        .box {
+          width: calc(25% - 36px);
+          gap: 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .pagination {
+    .pagination-wrapper {
+      .boxes {
+        .box {
+          width: calc(33.33% - 32px);
+        }
+      }
+      .news-fillter {
+        .serach {
+          width: 25%;
+        }
+        .filter {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .pagination {
+    .pagination-wrapper {
+      .news-fillter {
+        .serach {
+          width: 50%;
+        }
+        .filter {
+          width: 50%;
+          padding: 23px 20px;
+        }
+      }
+      .boxes {
+        gap: 30px;
+
+        .box {
+          width: calc(33.33% - 20px);
+        }
+      }
+    }
+  }
+  .filter_icon {
+    padding: 30px;
+  }
+}
+@media (max-width: 860px) {
+  .pagination {
+    .pagination-wrapper {
+      .boxes {
+        .box {
+          width: calc(50% - 15px);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .pagination {
+    .pagination-wrapper {
+      .boxes {
+        .box {
+          width: 100%;
+        }
+      }
+      .serach_fillter {
+        flex-direction: column;
+
+        .serach,
+        .filter {
+          width: 100%;
+          border-right: none;
+        }
+
+        .filter {
+          border-top: 0.5px solid $border !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 410px) {
+  .filter-box {
+    width: 300px;
+  }
+}
